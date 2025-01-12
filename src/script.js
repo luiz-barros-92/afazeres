@@ -4,21 +4,24 @@ const lista = document.getElementById('lista');
 
 tarefaInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
-  adicionarTarefa();
+    adicionarTarefa();
   }
  });
  
- adicionarBtn.addEventListener('click', adicionarTarefa);
+adicionarBtn.addEventListener('click', adicionarTarefa);
  
- function adicionarTarefa() {
+function adicionarTarefa() {
+
   const tarefa = tarefaInput.value.trim();
+
   if (tarefa === '') {
-  alert('Por favor, insira uma tarefa.');
-  return;
+    alert('Por favor, insira uma tarefa.');
+    return;
   }
  
   const itemTarefa = document.createElement('li');
   itemTarefa.textContent = tarefa;
+
   const removerBtn = document.createElement('button');
   removerBtn.textContent = 'Remover';
   removerBtn.className = 'btn-remover';
@@ -32,7 +35,9 @@ tarefaInput.addEventListener('keypress', (e) => {
   });
  
   itemTarefa.appendChild(removerBtn);
+  
   lista.appendChild(itemTarefa);
+
   tarefaInput.value = '';
  }
 
