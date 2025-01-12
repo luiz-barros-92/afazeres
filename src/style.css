@@ -9,6 +9,10 @@ body {
     color: #ddd;
     text-align: center;
 }
+header {
+    background-color: #4d4d4d;   
+    
+}
 input, button { 
     padding: 10px; 
     margin: 5px;
