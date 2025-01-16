@@ -32,6 +32,7 @@ function adicionarTarefa() {
  
   itemTarefa.addEventListener('click', () => {
   itemTarefa.classList.toggle('completed');
+  tarefaInput.focus();
   });
  
   removerBtn.addEventListener('click', () => {
