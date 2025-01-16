@@ -5,10 +5,14 @@ const lista = document.getElementById('lista');
 tarefaInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     adicionarTarefa();
+    tarefaInput.focus();
   }
  });
  
-adicionarBtn.addEventListener('click', adicionarTarefa);
+ adicionarBtn.addEventListener('click', () => {
+  adicionarTarefa();
+  tarefaInput.focus();
+});
  
 function adicionarTarefa() {
 
@@ -32,6 +36,7 @@ function adicionarTarefa() {
  
   removerBtn.addEventListener('click', () => {
   lista.removeChild(itemTarefa);
+  tarefaInput.focus();
   });
  
   itemTarefa.appendChild(removerBtn);
