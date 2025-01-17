@@ -17,6 +17,7 @@ input, button {
     margin: 5px; }
 
 input#tarefaInput {
+    height: 12px;
     width: 70%;
     max-width: 470px;
     padding: 10px;
