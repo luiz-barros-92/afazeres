@@ -5,53 +5,73 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #272727;
-    color: #ddd;
+    background-color: #c5c5c5;
+    color: #000000;
     text-align: center; }
 
 header {
-    background-color: #4d4d4d; }
+    background-color: #5a91f8;
+    font-family: Pacifico, cursive;
+    font-size: 23px; }
+
+header small {
+    font-size: 23px;
+    color: #666;
+    font-style: italic; }
 
 input, button { 
     padding: 10px; 
     margin: 5px; }
 
 input#tarefaInput {
-    height: 12px;
-    width: 70%;
-    max-width: 470px;    
-    font-size: 18px;
-    background-color: #ddd; }
+    height: 40px;
+    width: 76%;
+    max-width: 495px;
+    font-size: 18px;    
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #5a91f8;
+    border-radius: 5px;
+    background-color: #c5c5c5;
+    color: #000000;
+    box-sizing: border-box; }
 
 ul { 
     list-style: none; 
     padding: 0; }
 
 li {
-    color: #ddd;
+    color: #000000;
     padding: 1rem;
     margin: 0.5rem auto;
     max-width: 595px;
-    border: 1px solid #919191;
+    border: 1px solid #5a91f8;
     border-radius: 10px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center; }
   
-  li.completed {
+li.completed {
     text-decoration: line-through;
-    background-color: #383838; }
+    background-color: #b9b9b9; }
 
 button { 
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #c5c5c5;
+    padding: 10px;    
+    border: 1px solid #5a91f8;
+    border-radius: 5px;
+    background-color: #c5c5c5;
+    color: #000000;
+    box-sizing: border-box; }
 
 .btn-remover {
     margin-left: 10px; }
 
 footer {
-    background-color: #272727;
-    color: #ddd;
+    background-color: #c5c5c5;
+    color: #000000;
     padding: 10px;
     clear: both;
     margin-top: auto; }
@@ -63,7 +83,7 @@ footer p {
     font-size: 13px; }
   
 #rodape a {
-    color: #ddd; }
+    color: #000000; }
 
 h2 {
     display: flex;
