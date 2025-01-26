@@ -52,9 +52,8 @@ li {
     justify-content: space-between;
     align-items: center; }
   
-li.completed {
-    text-decoration: line-through;
-    background-color: #b9b9b9; }
+li.completed {    
+    background-color: #a1cfff; }
 
 button { 
     cursor: pointer;

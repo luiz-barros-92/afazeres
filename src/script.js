@@ -11,11 +11,14 @@ function carregarTarefas() {
   const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
   tarefas.forEach(tarefa => {
     const itemTarefa = document.createElement('li');
+
     itemTarefa.textContent = tarefa.tarefa;
     itemTarefa.classList.toggle('completed', tarefa.concluida);
+
     const removerBtn = document.createElement('button');
     removerBtn.textContent = 'Remover';
     removerBtn.className = 'btn-remover';
+
     itemTarefa.addEventListener('click', () => {
       itemTarefa.classList.toggle('completed');
       atualizarTarefa(tarefa, itemTarefa.classList.contains('completed'));
@@ -41,9 +44,11 @@ function adicionarTarefa() {
   }
   const itemTarefa = document.createElement('li');
   itemTarefa.textContent = tarefa;
+
   const removerBtn = document.createElement('button');
   removerBtn.textContent = 'Remover';
   removerBtn.className = 'btn-remover';
+  
   itemTarefa.addEventListener('click', () => {
     itemTarefa.classList.toggle('completed');
     atualizarTarefa({ tarefa, concluida: itemTarefa.classList.contains('completed') });
@@ -69,6 +74,7 @@ function adicionarTarefaLocalStorage(tarefa) {
 function atualizarTarefa(tarefa, concluida) {
   const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
   const index = tarefas.findIndex(t => t.tarefa === tarefa.tarefa);
+
   if (index !== -1) {
     tarefas[index].concluida = concluida;
     localStorage.setItem('tarefas', JSON.stringify(tarefas));
@@ -78,6 +84,7 @@ function atualizarTarefa(tarefa, concluida) {
 function removerTarefa(tarefa) {
   const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
   const index = tarefas.findIndex(t => t.tarefa === tarefa.tarefa);
+
   if (index !== -1) {
     tarefas.splice(index, 1);
     localStorage.setItem('tarefas', JSON.stringify(tarefas));
